@@ -4,7 +4,7 @@
   <name>ARP-sphero-pkg</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="no@no,.conm">hyperlabsuser</maintainer>
+  <maintainer email="rayneralla1@gmail.com">hyperlabsuser</maintainer>
   <license>TODO: License declaration</license>
 
   <test_depend>ament_copyright</test_depend>
