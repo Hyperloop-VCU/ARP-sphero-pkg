@@ -32,12 +32,12 @@ def generate_launch_description():
         prefix=IN_THIS_TERMINAL,
     )
 
-    # led_control waits by itself until the driver has connected before it
+    # sphero_led waits by itself until the driver has connected before it
     # reads any keys, so it doesn't take the number typed for the driver.
-    led_control = Node(
+    sphero_led = Node(
         package="ARP-sphero-pkg",
-        executable="led_control",
-        name="led_control",
+        executable="sphero_led",
+        name="sphero_led",
         prefix=IN_THIS_TERMINAL,
         # To change settings from here instead of in sphero_led.py, add e.g.:
         # parameters=[{"target": "leds", "cycle_speed": 0.5}],
@@ -48,7 +48,7 @@ def generate_launch_description():
         RegisterEventHandler(
             OnProcessExit(target_action=node, on_exit=[EmitEvent(event=Shutdown())])
         )
-        for node in (driver, led_control)
+        for node in (driver, sphero_led)
     ]
 
-    return LaunchDescription([driver, led_control, *stop_all])
+    return LaunchDescription([driver, sphero_led, *stop_all])

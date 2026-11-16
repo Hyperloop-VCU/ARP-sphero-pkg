@@ -28,7 +28,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'led_control = ARP_sphero_pkg.sphero_led:main',
+            'sphero_led = ARP_sphero_pkg.sphero_led:main',
             'sphero_line = ARP_sphero_pkg.sphero_line:main',
         ],
     },

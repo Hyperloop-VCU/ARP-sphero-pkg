@@ -4,7 +4,7 @@ Start the driver first (in its own terminal):
     ros2 run sphero-monash-ros-pkg robot_node
 
 Then run this node:
-    ros2 run ARP-sphero-pkg led_control
+    ros2 run ARP-sphero-pkg sphero_led
 
 While it is running, type a key and press Enter:
     r, g, b, ...   change to that colour (see COLORS below)
@@ -91,7 +91,7 @@ PROMPT = "Color: "
 
 class LedControlNode(Node):
     def __init__(self):
-        super().__init__("led_control")
+        super().__init__("sphero_led")
 
         # Every setting above can be overridden with --ros-args -p name:=value
         self.declare_parameter("target", TARGET)
