@@ -46,7 +46,7 @@ source install/setup.bash
 ```
 
 ### 6. Launch a project
-
+*Note: these projects require that you have https://github.com/Hyperloop-VCU/sphero-monash-ros-pkg.git in your src folder.
 | Project | Command |
 |---------|---------|
 | LED  | `ros2 launch ARP-sphero-pkg sphero_led.launch.py` |
